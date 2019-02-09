@@ -57,3 +57,8 @@ gulp.task('html', function () {
     return gulp.src(path.src.html)
         .pipe(gulp.dest(path.dist.html));
 });
+gulp.task('sass', function () {
+    return gulp.src(path.src.style)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(path.dist.css));
+});
