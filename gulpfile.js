@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     minifyjs = require('gulp-js-minify'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
+    babel = require('gulp-babel'),
     cleanCSS = require('gulp-clean-css'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
@@ -11,7 +12,6 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     reload = browserSync.reload;
 sass.compiler = require('node-sass');
-
 
 const path = {
     dist: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -24,7 +24,7 @@ const path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'src/style/style.scss',
+        style: 'src/scss/style.scss',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
@@ -62,3 +62,7 @@ gulp.task('sass', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(path.dist.css));
 });
+gulp.task('concat-js', function () {
+    return gulp.src(path.src.js)
+        .pipe()
+})
