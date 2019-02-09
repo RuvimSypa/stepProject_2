@@ -46,6 +46,9 @@ const config = {
     port: 3000,
     logPrefix: ""
 };
+gulp.task('serve', function () {
+    browserSync.init(config)
+});
 gulp.task('clean', function (){
     return gulp.src(path.clean, {read: false})
         .pipe(clean());
