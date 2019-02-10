@@ -1,3 +1,26 @@
 @import "export/variables";
 @import "export/mixins";
+@import "export/reset";
+//320: 320 - 479
+//480: 480 - 767
+//768: 768 - 1199
+//1200: 1200+
+
+
+.revo-edit {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    @include font(32px, #8d81ac, $ff_m, 700)
+  }
+}
+
+.container {
+  width: 280px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
 
