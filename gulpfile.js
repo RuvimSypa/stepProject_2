@@ -120,4 +120,8 @@ gulp.task('img-minify', () =>
         .pipe(gulp.dest('dist/images'))
 );
 //Task  DEV
+<<<<<<< HEAD
 gulp.task('dev', gulpSequence('clean', ['html', 'copy-js', 'mini-css'], 'serve'));
+=======
+gulp.task('dev', gulpSequence('clean', ['html', 'copy-js', 'mini-css'], 'serve'));
+>>>>>>> ruvim
