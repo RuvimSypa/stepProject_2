@@ -1,0 +1,23 @@
+@mixin font($size, $color, $family, $weight: 400, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+  font-family: $family;
+}
+
+@mixin media($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin flex($ai, $direction: row, $wrap: nowrap,$jc: flex-start) {
+  display: flex;
+  @if ($direction != row or $wrap != nowrap) {
+    flex-flow: $direction $wrap;
+  }
+  justify-content: $jc;
+  align-items: $ai;
+}
+
