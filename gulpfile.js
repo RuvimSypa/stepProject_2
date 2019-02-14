@@ -64,7 +64,7 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
     return gulp.src(path.src.style)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(path.dist.css));
+        .pipe(gulp.dest( 'src/css'));
 });
 gulp.task('prefixer', ['sass'], () =>
     gulp.src('src/css/*.css')
@@ -113,11 +113,17 @@ gulp.task('serve', function () {
     gulp.watch('./src/scss/**/*.scss', ['mini-css']).on('change', reload);
     gulp.watch('./src/js/**/*.js', ['copy-js']).on('change', reload);
 });
-//Task
+//Task IMG
 gulp.task('img-minify', () =>
-    gulp.src('src/image/*')
+    gulp.src(path.src.img)
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest(path.dist.img))
 );
+//Task FONTS
+gulp.task('fonts', function() {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.dist.fonts))
+});
 //Task  DEV
-gulp.task('dev', gulpSequence('clean', ['html', 'copy-js', 'mini-css'], 'serve'));
+gulp.task('dev', gulpSequence('clean', ['html', 'copy-js', 'mini-css', 'img-minify', 'fonts'], 'serve'));
+
