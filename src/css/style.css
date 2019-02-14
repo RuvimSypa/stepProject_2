@@ -320,19 +320,27 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
-.revo-edit {
-  background-color: #f4f4f4;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
 .container {
   width: 280px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.solution__bg {
   background-color: #f4f4f4;
   display: -webkit-box;
   display: -webkit-flex;
@@ -343,9 +351,47 @@ textarea {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.revo-edit__title {
+.solution__title {
   font-size: 32px;
   font-weight: 700;
   font-style: normal;
   color: #8d81ac;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 43px; }
+
+.solution__features-item {
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .solution__features-item__title {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #323232;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 25px; }
+  .solution__features-item__text {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #848e97;
+    font-family: "Lato", sans-serif;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 21px; }
