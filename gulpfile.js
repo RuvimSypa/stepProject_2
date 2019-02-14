@@ -46,7 +46,7 @@ const config = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 3000,
+    port: 8888,
     logPrefix: ""
 };
 //Task CLEAN
