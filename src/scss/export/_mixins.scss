@@ -12,12 +12,12 @@
   }
 }
 
-@mixin flex($ai, $direction: row, $wrap: nowrap,$jc: flex-start) {
-  display: flex;
-  @if ($direction != row or $wrap != nowrap) {
-    flex-flow: $direction $wrap;
-  }
-  justify-content: $jc;
-  align-items: $ai;
-}
+//@mixin flex($ai, $direction: row, $wrap: nowrap,$jc: flex-start) {
+//  display: flex;
+//  @if ($direction != row or $wrap != nowrap) {
+//    flex-flow: $direction $wrap;
+//  }
+//  justify-content: $jc;
+//  align-items: $ai;
+//}
 
