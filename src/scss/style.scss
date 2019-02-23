@@ -250,19 +250,6 @@
         color: #fff;
         background-color: #273f4c;
       }
-
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/github.svg");
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -294,19 +281,6 @@
         border: 1px solid #21a7d2;
       }
 
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/twitter.svg");
-      //  filter: brightness(0) invert(1);
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -336,24 +310,6 @@
         background-color: #fff;
         border: 1px solid #385899;
       }
-
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/facebook.svg");
-      //  filter: brightness(0) invert(1);
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //  //display: block;
-      //  //font-family: "Font Awesome 5 Free";
-      //  //content: "\f09b";
-      //  //font-size: 30px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -426,7 +382,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
   &__title {
     margin-top: 30px;
     @include font(24px, #323232, $ff_m, 700);
@@ -555,8 +510,6 @@
         height: 40px;
         box-sizing: border-box;
       }
-
-
     }
   }
 }
@@ -731,18 +684,22 @@
         justify-content: space-between;
       }
     }
-    &__logo-block:hover h2{
+
+    &__logo-block:hover h2 {
       color: #8d81ac;
     }
-    &__logo-block:hover span{
+
+    &__logo-block:hover span {
       color: #323232;
     }
+
     &__logo-block:hover .&__logo-img {
       background-position: -73px -9px;
     }
 
     &__menu-nav {
       margin-top: 40px;
+
       &__link a:hover {
         border-bottom: 1px solid #8d81ac;
       }
