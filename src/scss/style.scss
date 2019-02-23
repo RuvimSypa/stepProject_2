@@ -1,56 +1,553 @@
 @import "export/variables";
 @import "export/mixins";
 @import "export/reset";
-//320: 320 - 479
 //480: 480 - 767
 //768: 768 - 1199
 //1200: 1200+
 
 .container {
-  width: 280px;
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 15px;
 }
-.solution {
 
-  &__bg {
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
+.main-banner {
+  background: url("../img/header-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__content {
+    width: 100%;
+    text-align: center;
+    padding: 44px 0 424px 0;
+    &-name {
+      @include font(54px, #fff, $ff_m, 700);
+      margin-bottom: 28px;
+    }
+    &-slogan {
+      @include font(20px, #8d81ac, $ff_m, 100);
+      line-height: 34px;
+      margin-bottom: 28px;
+    }
+    &-version {
+      @include font(16px, #848e97, $ff_m);
+    }
   }
+  &__download {
+    position: absolute;
+    bottom: -50px;
+    &-btn {
+      @include font(18px, #fff, $ff_m, 700);
+      text-decoration: none;
+      background: #8d81ac;
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      margin-bottom: 12px;
+    }
+    &-text {
+      @include font(14px, #848e97, $ff_m);
+      text-align: center;
+    }
+  }
+}
+.revo-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__content {
+  margin: 120px 0 88px 0;
+  &-title {
+    @include font(26px, #635c73, $ff_m, 700);
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &-description {
+    @include font(14px, #323232, $ff_l);
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__git {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &-btn {
+      margin: 10px 5px;
+    }
+  }
+}
+}
+
+// HEADER END//
+
+//TESTIMONALS BEGIN //
+
+.testimonials {
+  background: #4b3b4e url("../img/testamonals-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0 93px 0;
+  position: relative;
 
   &__title {
-    @include font(32px, #8d81ac, $ff_m, 700);
+    @include font(36px, #fff, $ff_m, 700);
     text-align: center;
-    margin-top: 43px;
+    line-height: 48px;
+    margin-bottom: 50px;
   }
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__items {
+      text-align: center;
+      @include font(16px, #fff, $ff_l, 700 i, italic);
+      line-height: 24px;
+      margin-bottom: 40px;
+      &-img {
+        margin-bottom: 30px;
+      }
+    }
+    &__items:last-child::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 280px;
+      background: #645766;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+//TESTIMONALS END //
 
-  &__features {
+// PRICE BEGIN//
+  .pricing {
+    background: #4b3b4e url("../img/pricing-bg.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 73px 0 93px 0;
 
-    &-item {
-      margin-top: 34px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    &__title {
+      @include font(24px, #fff, $ff_m, 700);
+      text-align: center;
+      line-height: 42px;
+      margin-bottom: 43px;
+    }
+  }
+  .pricing-table {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-      &__title {
-        @include font(16px, #323232, $ff_m);
-        margin-top: 25px;
+    &__plan {
+      width: 258px;
+      height: 468px;
+      background: rgba(255, 255, 255, 0.11);
+      text-align: center;
+      margin-bottom: 14px;
+
+      &-active {
+        width: 290px;
+        height: 552px;
+        background: rgba(255, 255, 255, 0.11);
+        text-align: center;
+        margin-bottom: 14px;
       }
 
-      &__text {
-        @include font(14px, #848e97, $ff_l);
-        line-height: 23px;
-        text-align: center;
-        margin-top: 21px;
+      &-title {
+        @include font(24px, #fff, $ff_m);
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 42px 0 34px 0;
+      }
+
+      &__description {
+        padding: 32px 0 38px 0;
+
+        &-price {
+          @include font(60px, #fff, $ff_m, 700);
+          margin-bottom: 24px;
+        }
+
+        &-price span {
+          @include font(60px, #fff, $ff_m);
+        }
+
+        &-term {
+          @include font(14px, #9a939b, $ff_m);
+          text-transform: uppercase;
+          padding-bottom: 38px;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 32px;
+        }
+
+        &-term::after {
+          position: absolute;
+          content: "";
+          height: 5px;
+          width: 60px;
+          background: #8d81ac;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+
+        &-benefits {
+          margin-bottom: 37px;
+          height: 42px;
+        }
+
+        &-benefits li {
+          @include font(16px, #fff, $ff_m);
+          line-height: 26px;
+        }
+
+        &-button {
+          @include font(16px, #fff, $ff_m);
+          text-transform: uppercase;
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.16);
+          display: inline-block;
+          padding: 15px 40px 15px 40px;
+          border-radius: 50px;
+        }
+      }
+    }
+    &__plan-active {
+      width: 290px;
+      height: 552px;
+      background: #413344;
+      text-align: center;
+      margin-bottom: 14px;
+
+      &-title {
+        @include font(24px, #fff, $ff_m);
+        text-transform: uppercase;
+        background: #392d3d;
+        padding: 42px 0 34px 0;
+      }
+
+      &__description {
+        padding: 13px 0 47px 0;
+
+        &-price {
+          @include font(82px, #fff, $ff_m, 700);
+          margin-bottom: 21px;
+        }
+
+        &-price span {
+          @include font(60px, #fff, $ff_m);
+        }
+
+        &-term {
+          @include font(14px, #9a939b, $ff_m);
+          text-transform: uppercase;
+          padding-bottom: 50px;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 42px;
+        }
+
+        &-term::after {
+          position: absolute;
+          content: "";
+          height: 5px;
+          width: 60px;
+          background: #8d81ac;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+
+        &-benefits {
+          margin-bottom: 82px;
+          height: 42px;
+        }
+
+        &-benefits li {
+          @include font(16px, #fff, $ff_m);
+          line-height: 26px;
+        }
+
+        &-button {
+          @include font(16px, #fff, $ff_m);
+          text-transform: uppercase;
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.16);
+          display: inline-block;
+          padding: 20px 51px 20px 51px;
+          border-radius: 50px;
+        }
       }
     }
   }
 
+@include media(480px) {
+  .container {
+    width: 450px;
+    padding: 0 25px;
+  }
+
+  .header {
+    @include font(10px, #8d81ac, $ff_m, 700);
+    background-color: #27262a;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-top-bar {;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      &-img {
+        vertical-align: middle;
+        margin-right: 16px;
+      }
+      &-name {
+       display: none;
+      }
+    }
+    &__nav {
+      margin: 20px auto 0 auto;
+      &-menu li{
+        @include font(16px, #8d81ac, $ff_m, 700);
+        text-decoration: none;
+        display: inline;
+        margin-right: 45px;
+      }
+      &-menu a {
+        @include font(18px, #8d81ac, $ff_m, 700);
+        text-decoration: none;
+      }
+    }
+    &__btn {
+      @include font(20px, #fff, $ff_m, 700);
+      text-decoration: none;
+      background: #8d81ac;
+      display: inline-block;
+      padding: 12px 25px 12px 25px;
+      border-radius: 50px;
+      border: none;
+    }
+  }
+
+  .testimonials {
+/*    background: #4b3b4e url("../img/testamonals-bg-768.jpg") no-repeat center top;*/
+    &__title {
+      @include font(42px, #fff, $ff_m, 700);
+      line-height: 60px;
+      margin-bottom: 100px;
+    }
+    &__items {
+      text-align: center;
+      @include font(16px, #fff, $ff_l, 700i, italic);
+      margin-bottom: 60px;
+      width: 320px;
+      &-img {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
+@include media(768px) {
+  .container {
+    width: 728px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header {
+    @include font(10px, #8d81ac, $ff_m, 700);
+    background-color: #27262a;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
 
+  .header-top-bar {;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      &-img {
+        vertical-align: middle;
+        margin-right: 16px;
+      }
+      &-name {
+        display: inline;
+        text-transform: uppercase;
+        vertical-align: middle;
+        @include font(24px, #8d81ac, $ff_l, 700);
+      }
+    }
+    &__nav {
+      margin: 20px auto 0 auto;
+      &-menu li{
+        @include font(16px, #8d81ac, $ff_m, 700);
+        text-decoration: none;
+        display: inline;
+        margin-right: 45px;
+      }
+      &-menu a {
+        @include font(18px, #8d81ac, $ff_m, 700);
+        text-decoration: none;
+      }
+    }
+    &__btn {
+      @include font(20px, #fff, $ff_m, 700);
+      text-decoration: none;
+      background: #8d81ac;
+      display: inline-block;
+      padding: 12px 25px 12px 25px;
+      border-radius: 50px;
+      border: none;
+    }
+  }
+
+
+  .testimonials {
+  &__block {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__items{
+      width: 305px;
+      &-img{
+        height: 64px;
+        margin-bottom: 32px;
+      }
+      &-text {
+
+      }
+    }
+  }
+}
+  // PRICE 768px BEGIN//
+  .pricing {
+    padding: 73px 0 93px 0;
+
+    &__title {
+      @include font(42px, #fff, $ff_m, 700);
+      text-align: center;
+      line-height: 42px;
+      margin-bottom: 43px;
+    }
+  }
+  .pricing-table {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+
+    &__plan {
+      margin: 42px 12px;
+    }
+  }
+  // PRICE 768px END//
+}
+
+@include media(1200px) {
+  .container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // HEADER START//
+
+  .header {
+    @include font(10px, #8d81ac, $ff_m, 700);
+    background-color: #27262a;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .header-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    &__logo {
+      order: 0;
+      &-img {
+        vertical-align: middle;
+        margin-right: 16px;
+      }
+      &-name {
+        text-transform: uppercase;
+        vertical-align: middle;
+        @include font(24px, #8d81ac, $ff_l, 700);
+      }
+    }
+    &__nav {
+      order: 2;
+    }
+    &__btn {
+      &_order {
+        order: 3;
+      }
+    }
+  }
+
+
+
+  .testimonials {
+    &__title {
+      @include font(48px, #fff, $ff_m, 700);
+    }
+  }
+
+  // PRICE BEGIN//
+
+  .pricing {
+    padding: 73px 0 93px 0;
+    &__title {
+      @include font(48px, #fff, $ff_m, 700);
+      margin-bottom: 70px;
+    }
+    .pricing-table {
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      align-content: space-between;
+
+      &__plan {
+        margin: 42px 12px;
+      }
+    }
+  }
+  // PRICE END//
+}
 
