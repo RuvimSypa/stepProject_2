@@ -1,129 +1,87 @@
 @import "export/variables";
 @import "export/mixins";
 @import "export/reset";
-//480: 480 - 767
-//768: 768 - 1199
-//1200: 1200+
-@include media(320px) {
+.container {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
 
-  .container {
-    width: 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 15px;
-  }
-  .main-banner {
-    background: url("../img/header-bg.jpg") no-repeat center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    &__content {
-      width: 100%;
-      text-align: center;
-      padding: 44px 0 424px 0;
-      &-name {
-        @include font(54px, #fff, $ff_m, 700);
-        margin-bottom: 28px;
-      }
-      &-slogan {
-        @include font(20px, #8d81ac, $ff_m, 100);
-        line-height: 34px;
-        margin-bottom: 28px;
-      }
-      &-version {
-        @include font(16px, #848e97, $ff_m);
-      }
+.main-banner {
+  background: url("../img/header-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__content {
+    width: 100%;
+    text-align: center;
+    padding: 44px 0 424px 0;
+    &-name {
+      @include font(54px, #fff, $ff_m, 700);
+      margin-bottom: 28px;
     }
-    &__download {
-      position: absolute;
-      bottom: -50px;
+    &-slogan {
+      @include font(20px, #8d81ac, $ff_m, 100);
+      line-height: 34px;
+      margin-bottom: 28px;
+    }
+    &-version {
+      @include font(16px, #848e97, $ff_m);
+    }
+  }
+  &__download {
+    position: absolute;
+    bottom: -50px;
+    &-btn {
+      @include font(18px, #fff, $ff_m, 700);
+      text-decoration: none;
+      background: #8d81ac;
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      margin-bottom: 12px;
+    }
+    &-text {
+      @include font(14px, #848e97, $ff_m);
+      text-align: center;
+    }
+  }
+}
+.revo-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__content {
+    margin: 120px 0 88px 0;
+    &-title {
+      @include font(26px, #635c73, $ff_m, 700);
+      line-height: 42px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    &-description {
+      @include font(14px, #323232, $ff_l);
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    &__git {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
       &-btn {
-        @include font(18px, #fff, $ff_m, 700);
-        text-decoration: none;
-        background: #8d81ac;
-        display: inline-block;
-        padding: 16px 36px;
-        border-radius: 50px;
-        border: none;
-        margin-bottom: 12px;
-      }
-      &-text {
-        @include font(14px, #848e97, $ff_m);
-        text-align: center;
+        margin: 10px 5px;
       }
     }
   }
-  .revo-edit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    &__content {
-      margin: 120px 0 88px 0;
-
-      &-title {
-        @include font(26px, #635c73, $ff_m, 700);
-        line-height: 42px;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      &-description {
-        @include font(14px, #323232, $ff_l);
-        line-height: 20px;
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      &__git {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        &-btn {
-          margin: 10px 5px;
-        }
-      }
-    }
-  }
-  .solution {
-
-    &__bg {
-      background-color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__title {
-      @include font(32px, #8d81ac, $ff_m, 700);
-      text-align: center;
-      margin-top: 43px;
-    }
-
-    &__features {
-      margin-top: 34px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      &-block {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-
-      &__title {
-        @include font(16px, #323232, $ff_m);
-        margin-top: 25px;
-        text-align: center;
-
+}
 
 // HEADER END//
 
@@ -174,170 +132,170 @@
 //TESTIMONALS END //
 
 // PRICE BEGIN//
-  .pricing {
-    background: #4b3b4e url("../img/pricing-bg.jpg") no-repeat center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    padding: 73px 0 93px 0;
+.pricing {
+  background: #4b3b4e url("../img/pricing-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 73px 0 93px 0;
 
-    &__title {
-      @include font(24px, #fff, $ff_m, 700);
-      text-align: center;
-      line-height: 42px;
-      margin-bottom: 43px;
-    }
+  &__title {
+    @include font(24px, #fff, $ff_m, 700);
+    text-align: center;
+    line-height: 42px;
+    margin-bottom: 43px;
   }
-  .pricing-table {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+}
+.pricing-table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-    &__plan {
-      width: 258px;
-      height: 468px;
+  &__plan {
+    width: 258px;
+    height: 468px;
+    background: rgba(255, 255, 255, 0.11);
+    text-align: center;
+    margin-bottom: 14px;
+
+    &-active {
+      width: 290px;
+      height: 552px;
       background: rgba(255, 255, 255, 0.11);
       text-align: center;
       margin-bottom: 14px;
-
-      &-active {
-        width: 290px;
-        height: 552px;
-        background: rgba(255, 255, 255, 0.11);
-        text-align: center;
-        margin-bottom: 14px;
-      }
-
-      &-title {
-        @include font(24px, #fff, $ff_m);
-        text-transform: uppercase;
-        background: rgba(255, 255, 255, 0.06);
-        padding: 42px 0 34px 0;
-
-      }
-      &__description {
-        padding: 32px 0 38px 0;
-
-        &-price {
-          @include font(60px, #fff, $ff_m, 700);
-          margin-bottom: 24px;
-        }
-
-        &-price span {
-          @include font(60px, #fff, $ff_m);
-        }
-
-        &-term {
-          @include font(14px, #9a939b, $ff_m);
-          text-transform: uppercase;
-          padding-bottom: 38px;
-          position: relative;
-          display: inline-block;
-          margin-bottom: 32px;
-        }
-
-        &-term::after {
-          position: absolute;
-          content: "";
-          height: 5px;
-          width: 60px;
-          background: #8d81ac;
-          margin: 0 auto;
-          left: 0;
-          right: 0;
-          bottom: 0;
-        }
-
-        &-benefits {
-          margin-bottom: 37px;
-          height: 42px;
-        }
-
-        &-benefits li {
-          @include font(16px, #fff, $ff_m);
-          line-height: 26px;
-        }
-
-        &-button {
-          @include font(16px, #fff, $ff_m);
-          text-transform: uppercase;
-          text-decoration: none;
-          background: rgba(255, 255, 255, 0.16);
-          display: inline-block;
-          padding: 15px 40px 15px 40px;
-          border-radius: 50px;
-        }
-      }
     }
-    &__plan-active {
-      width: 290px;
-      height: 552px;
-      background: #413344;
-      text-align: center;
-      margin-bottom: 14px;
 
-      &-title {
-        @include font(24px, #fff, $ff_m);
-        text-transform: uppercase;
-        background: #392d3d;
-        padding: 42px 0 34px 0;
+    &-title {
+      @include font(24px, #fff, $ff_m);
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 42px 0 34px 0;
+    }
+
+    &__description {
+      padding: 32px 0 38px 0;
+
+      &-price {
+        @include font(60px, #fff, $ff_m, 700);
+        margin-bottom: 24px;
       }
 
-      &__description {
-        padding: 13px 0 47px 0;
+      &-price span {
+        @include font(60px, #fff, $ff_m);
+      }
 
-        &-price {
-          @include font(82px, #fff, $ff_m, 700);
-          margin-bottom: 21px;
-        }
+      &-term {
+        @include font(14px, #9a939b, $ff_m);
+        text-transform: uppercase;
+        padding-bottom: 38px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 32px;
+      }
 
-        &-price span {
-          @include font(60px, #fff, $ff_m);
-        }
+      &-term::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 60px;
+        background: #8d81ac;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
 
-        &-term {
-          @include font(14px, #9a939b, $ff_m);
-          text-transform: uppercase;
-          padding-bottom: 50px;
-          position: relative;
-          display: inline-block;
-          margin-bottom: 42px;
-        }
+      &-benefits {
+        margin-bottom: 37px;
+        height: 42px;
+      }
 
-        &-term::after {
-          position: absolute;
-          content: "";
-          height: 5px;
-          width: 60px;
-          background: #8d81ac;
-          margin: 0 auto;
-          left: 0;
-          right: 0;
-          bottom: 0;
-        }
+      &-benefits li {
+        @include font(16px, #fff, $ff_m);
+        line-height: 26px;
+      }
 
-        &-benefits {
-          margin-bottom: 82px;
-          height: 42px;
-        }
-
-        &-benefits li {
-          @include font(16px, #fff, $ff_m);
-          line-height: 26px;
-        }
-
-        &-button {
-          @include font(16px, #fff, $ff_m);
-          text-transform: uppercase;
-          text-decoration: none;
-          background: rgba(255, 255, 255, 0.16);
-          display: inline-block;
-          padding: 20px 51px 20px 51px;
-          border-radius: 50px;
-        }
+      &-button {
+        @include font(16px, #fff, $ff_m);
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.16);
+        display: inline-block;
+        padding: 15px 40px 15px 40px;
+        border-radius: 50px;
       }
     }
   }
+  &__plan-active {
+    width: 290px;
+    height: 552px;
+    background: #413344;
+    text-align: center;
+    margin-bottom: 14px;
+
+    &-title {
+      @include font(24px, #fff, $ff_m);
+      text-transform: uppercase;
+      background: #392d3d;
+      padding: 42px 0 34px 0;
+    }
+
+    &__description {
+      padding: 13px 0 47px 0;
+
+      &-price {
+        @include font(82px, #fff, $ff_m, 700);
+        margin-bottom: 21px;
+      }
+
+      &-price span {
+        @include font(60px, #fff, $ff_m);
+      }
+
+      &-term {
+        @include font(14px, #9a939b, $ff_m);
+        text-transform: uppercase;
+        padding-bottom: 50px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 42px;
+      }
+
+      &-term::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 60px;
+        background: #8d81ac;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &-benefits {
+        margin-bottom: 82px;
+        height: 42px;
+      }
+
+      &-benefits li {
+        @include font(16px, #fff, $ff_m);
+        line-height: 26px;
+      }
+
+      &-button {
+        @include font(16px, #fff, $ff_m);
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.16);
+        display: inline-block;
+        padding: 20px 51px 20px 51px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
 
 @include media(480px) {
   .container {
@@ -365,7 +323,7 @@
         margin-right: 16px;
       }
       &-name {
-       display: none;
+        display: none;
       }
     }
     &__nav {
@@ -393,7 +351,7 @@
   }
 
   .testimonials {
-/*    background: #4b3b4e url("../img/testamonals-bg-768.jpg") no-repeat center top;*/
+    /*    background: #4b3b4e url("../img/testamonals-bg-768.jpg") no-repeat center top;*/
     &__title {
       @include font(42px, #fff, $ff_m, 700);
       line-height: 60px;
@@ -471,19 +429,164 @@
 
 
   .testimonials {
-  &__block {
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__items{
-      width: 305px;
-      &-img{
-        height: 64px;
-        margin-bottom: 32px;
-      }
-      &-text {
+    &__block {
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__items{
+        width: 305px;
+        &-img{
+          height: 64px;
+          margin-bottom: 32px;
+        }
+        &-text {
 
+        }
+      }
+    }
+  }
+  // PRICE 768px BEGIN//
+  .pricing {
+    padding: 73px 0 93px 0;
+
+    &__title {
+      @include font(42px, #fff, $ff_m, 700);
+      text-align: center;
+      line-height: 42px;
+      margin-bottom: 43px;
+    }
+  }
+  .pricing-table {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+
+    &__plan {
+      margin: 42px 12px;
+    }
+  }
+  // PRICE 768px END//
+}
+
+@include media(1200px) {
+  .container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // HEADER START//
+
+  .header {
+    @include font(10px, #8d81ac, $ff_m, 700);
+    background-color: #27262a;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .header-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    &__logo {
+      order: 0;
+      &-img {
+        vertical-align: middle;
+        margin-right: 16px;
+      }
+      &-name {
+        text-transform: uppercase;
+        vertical-align: middle;
+        @include font(24px, #8d81ac, $ff_l, 700);
+      }
+    }
+    &__nav {
+      order: 2;
+    }
+    &__btn {
+      &_order {
+        order: 3;
+      }
+    }
+  }
+
+
+
+  .testimonials {
+    &__title {
+      @include font(48px, #fff, $ff_m, 700);
+    }
+  }
+
+  // PRICE BEGIN//
+
+  .pricing {
+    padding: 73px 0 93px 0;
+    &__title {
+      @include font(48px, #fff, $ff_m, 700);
+      margin-bottom: 70px;
+    }
+    .pricing-table {
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      align-content: space-between;
+
+      &__plan {
+        margin: 42px 12px;
+      }
+    }
+  }
+  // PRICE END//
+}
+@include media(320px) {
+
+  .solution {
+
+    &__bg {
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      @include font(32px, #8d81ac, $ff_m, 700);
+      text-align: center;
+      margin-top: 43px;
+    }
+
+    &__features {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &-block {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      &__title {
+        @include font(16px, #323232, $ff_m);
+        margin-top: 25px;
+        text-align: center;
+      }
+
+      &__text {
+        @include font(14px, #848e97, $ff_l);
+        line-height: 23px;
+        text-align: center;
+        margin-top: 21px;
       }
     }
 
@@ -688,19 +791,6 @@
         color: #fff;
         background-color: #273f4c;
       }
-
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/github.svg");
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -732,19 +822,6 @@
         border: 1px solid #21a7d2;
       }
 
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/twitter.svg");
-      //  filter: brightness(0) invert(1);
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -774,24 +851,6 @@
         background-color: #fff;
         border: 1px solid #385899;
       }
-
-      //&__link::before {
-      //  content: '';
-      //  display: inline-block;
-      //  background-image: url("../img/social-icon/facebook.svg");
-      //  filter: brightness(0) invert(1);
-      //  width: 25px;
-      //  height: 25px;
-      //  background-size: 25px 25px;
-      //  position: absolute;
-      //  left: 25px;
-      //  top: 12px;
-      //  //display: block;
-      //  //font-family: "Font Awesome 5 Free";
-      //  //content: "\f09b";
-      //  //font-size: 30px;
-      //}
-
       &__foll {
         @include font(14px, #848e97, $ff_m);
         display: block;
@@ -858,13 +917,12 @@
   }
 }
 
-//CALLBACK 
+//CALLBACK
 .callback {
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
   &__title {
     margin-top: 30px;
     @include font(24px, #323232, $ff_m, 700);
@@ -956,7 +1014,6 @@
     }
   }
 }
-<<<<<<< HEAD
 
 @include media(1200px) {
   .callback {
@@ -994,8 +1051,6 @@
         height: 40px;
         box-sizing: border-box;
       }
-
-
     }
   }
 }
@@ -1037,108 +1092,6 @@
 
   &__menu-nav {
     margin-top: 36px;
-=======
-  // PRICE 768px BEGIN//
-  .pricing {
-    padding: 73px 0 93px 0;
-
-    &__title {
-      @include font(42px, #fff, $ff_m, 700);
-      text-align: center;
-      line-height: 42px;
-      margin-bottom: 43px;
-    }
-  }
-  .pricing-table {
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    align-content: space-between;
-
-    &__plan {
-      margin: 42px 12px;
-    }
-  }
-  // PRICE 768px END//
-}
-
-@include media(1200px) {
-  .container {
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  // HEADER START//
-
-  .header {
-    @include font(10px, #8d81ac, $ff_m, 700);
-    background-color: #27262a;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-  }
-  .header-top-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    &__logo {
-      order: 0;
-      &-img {
-        vertical-align: middle;
-        margin-right: 16px;
-      }
-      &-name {
-        text-transform: uppercase;
-        vertical-align: middle;
-        @include font(24px, #8d81ac, $ff_l, 700);
-      }
-    }
-    &__nav {
-      order: 2;
-    }
-    &__btn {
-      &_order {
-        order: 3;
-      }
-    }
-  }
-
-
-
-  .testimonials {
-    &__title {
-      @include font(48px, #fff, $ff_m, 700);
-    }
-  }
-
-  // PRICE BEGIN//
-
-  .pricing {
-    padding: 73px 0 93px 0;
-    &__title {
-      @include font(48px, #fff, $ff_m, 700);
-      margin-bottom: 70px;
-    }
-    .pricing-table {
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-direction: row;
-      align-content: space-between;
-
-      &__plan {
-        margin: 42px 12px;
-      }
-    }
-  }
-  // PRICE END//
-}
->>>>>>> 1774266a01e0b45a2ea3f89f74d62c3406296a2b
 
     &__title {
       @include font(16px, #323232, $ff_m);
@@ -1272,18 +1225,22 @@
         justify-content: space-between;
       }
     }
-    &__logo-block:hover h2{
+
+    &__logo-block:hover h2 {
       color: #8d81ac;
     }
-    &__logo-block:hover span{
-      color: #323232;
-    }
-    &__logo-block:hover .&__logo-img {
-      background-position: -73px -9px;
-    }
+
+    //&__logo-block:hover span {
+    //  color: #323232;
+    //}
+
+    //&__logo-block:hover .&__logo-img {
+    //  background-position: -73px -9px;
+    //}
 
     &__menu-nav {
       margin-top: 40px;
+
       &__link a:hover {
         border-bottom: 1px solid #8d81ac;
       }

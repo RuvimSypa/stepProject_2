@@ -122,4 +122,3 @@ gulp.task('fonts', function() {
 });
 //Task  DEV
 gulp.task('dev', gulpSequence('clean', ['html', 'compress-copy', 'mini-css', 'img-minify', 'fonts'], 'serve'));
-

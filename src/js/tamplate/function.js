@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const callBack = document.getElementsByClassName('callback__title')[0];
 const callBtn = document.getElementsByClassName('callback__form-btn')[0];
 
@@ -13,5 +12,4 @@ function changeName() {
 }
 window.addEventListener('resize', changeName);
 window.addEventListener('load', changeName);
-=======
->>>>>>> 1774266a01e0b45a2ea3f89f74d62c3406296a2b
+
