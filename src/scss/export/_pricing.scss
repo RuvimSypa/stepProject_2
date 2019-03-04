@@ -1,0 +1,214 @@
+.pricing {
+  background: #4b3b4e url("../img/pricing-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 73px 0 93px 0;
+
+  &__title {
+    @include font(24px, #fff, $ff_m, 700);
+    text-align: center;
+    line-height: 42px;
+    margin-bottom: 43px;
+  }
+}
+.pricing-table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__plan {
+    width: 258px;
+    height: 468px;
+    background: rgba(255, 255, 255, 0.11);
+    text-align: center;
+    margin-bottom: 14px;
+
+    &-active {
+      width: 290px;
+      height: 552px;
+      background: rgba(255, 255, 255, 0.11);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    &-title {
+      @include font(24px, #fff, $ff_m);
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 42px 0 34px 0;
+    }
+
+    &__description {
+      padding: 32px 0 38px 0;
+
+      &-price {
+        @include font(60px, #fff, $ff_m, 700);
+        margin-bottom: 24px;
+      }
+
+      &-price span {
+        @include font(60px, #fff, $ff_m);
+      }
+
+      &-term {
+        @include font(14px, #9a939b, $ff_m);
+        text-transform: uppercase;
+        padding-bottom: 38px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 32px;
+      }
+
+      &-term::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 60px;
+        background: #8d81ac;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &-benefits {
+        margin-bottom: 37px;
+        height: 42px;
+      }
+
+      &-benefits li {
+        @include font(16px, #fff, $ff_m);
+        line-height: 26px;
+      }
+
+      &-button {
+        @include font(16px, #fff, $ff_m);
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.16);
+        display: inline-block;
+        padding: 15px 40px 15px 40px;
+        border-radius: 50px;
+        &_hover:hover {
+          background-color: #d3cdd0;
+          color: #806d79;
+
+        }
+      }
+    }
+  }
+  &__plan-active {
+    width: 290px;
+    height: 552px;
+    background: #413344;
+    text-align: center;
+    margin-bottom: 14px;
+
+    &-title {
+      @include font(24px, #fff, $ff_m);
+      text-transform: uppercase;
+      background: #392d3d;
+      padding: 42px 0 34px 0;
+    }
+
+    &__description {
+      padding: 13px 0 47px 0;
+
+      &-price {
+        @include font(82px, #fff, $ff_m, 700);
+        margin-bottom: 21px;
+      }
+
+      &-price span {
+        @include font(60px, #fff, $ff_m);
+      }
+
+      &-term {
+        @include font(14px, #9a939b, $ff_m);
+        text-transform: uppercase;
+        padding-bottom: 50px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 42px;
+      }
+
+      &-term::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 60px;
+        background: #8d81ac;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &-benefits {
+        margin-bottom: 82px;
+        height: 42px;
+      }
+
+      &-benefits li {
+        @include font(16px, #fff, $ff_m);
+        line-height: 26px;
+      }
+
+      &-button {
+        @include font(16px, #fff, $ff_m);
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.16);
+        display: inline-block;
+        padding: 20px 51px 20px 51px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+@include media(480px) {
+  .pricing {
+    padding: 73px 0 93px 0;
+
+    &__title {
+      @include font(42px, #fff, $ff_m, 700);
+      text-align: center;
+      line-height: 42px;
+      margin-bottom: 43px;
+    }
+  }
+  .pricing-table {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+
+    &__plan {
+      margin: 42px 12px;
+    }
+  }
+}
+@include media(768px) {
+
+}
+@include media(1200px) {
+  .pricing {
+    padding: 73px 0 93px 0;
+    &__title {
+      @include font(48px, #fff, $ff_m, 700);
+      margin-bottom: 70px;
+    }
+    .pricing-table {
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      align-content: space-between;
+
+      &__plan {
+        margin: 42px 12px;
+      }
+    }
+  }
+}

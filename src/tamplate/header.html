@@ -1,38 +1,35 @@
 <header class="header">
     <div class="container">
-        <div class="header-top-bar">
-            <div class="header-top-bar__logo">
-                <img width="40" height="40" class="header-top-bar__logo-img" src="../img/logo.png" alt="">
-                <span class="header-top-bar__logo-name">Forkio</span>
-            </div>
-            <div class="header-top-bar__btn_order">
-                <button class="header-top-bar__btn">Buy Now</button>
-            </div>
-            <div class="header-top-bar__nav">
-                <!--<input class="menu-btn" type="checkbox" id="menu-btn" />
-                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>-->
-                <ul class="header-top-bar__nav-menu">
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">About Fork</a></li>
-                    <li><a href="#">Buying Options</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
+        <div class="header__top-bar">
+            <a class="header__top-bar_logo" href="#">
+                <span class="header__top-bar_logo_img"></span>
+                <span class="header__top-bar_logo_name">Forkio</span>
+            </a>
+            <button class="header__top-bar_btn btn-hover">Buy Now</button>
+            <ul class="header__top-bar_nav">
+                <li class="header__top-bar_nav_item"><a href="#">Overview</a></li>
+                <li class="header__top-bar_nav_item"><a href="#">About Fork</a></li>
+                <li class="header__top-bar_nav_item"><a href="#">Buying Options</a></li>
+                <li class="header__top-bar_nav_item"><a href="#">Support</a></li>
+            </ul>
+            <a id="hamburger" class="header__top-bar_nav_btn" href="#">
+                <span></span>
+            </a>
         </div>
     </div>
 </header>
 <div class="main-banner">
-    <div class="container">
+    <div class="container container__flex">
         <div class="main-banner__content">
             <h1 class="main-banner__content-name">Fork App</h1>
             <p class="main-banner__content-slogan">A Real Gamechanger In The World Of Web-Development</p>
             <p class="main-banner__content-version">v. 2.8 For Mac and Windows</p>
         </div>
-    </div>
-    <div class="main-banner__download">
-        <button class="main-banner__download-btn">Download For Free Now</button>
-        <p class="main-banner__download-text">
-            Unlimited 30-Days Trial Period
-        </p>
+        <div class="main-banner__download">
+            <button class="main-banner__download-btn btn-hover">Download For Free Now</button>
+            <p class="main-banner__download-text">
+                Unlimited 30-Days Trial Period
+            </p>
+        </div>
     </div>
 </div>

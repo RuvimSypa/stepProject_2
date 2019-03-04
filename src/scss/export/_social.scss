@@ -1,0 +1,219 @@
+.social {
+  .slick {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    &-left {
+      margin-right: 15px;
+      color: #a2a2a2;
+      font-size: 20px;
+      border-style: none;
+      background-color: #fff;
+    }
+
+    &-right {
+      margin-left: 15px;
+      color: #a2a2a2;
+      font-size: 20px;
+      border-style: none;
+      background-color: #fff;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__person-item {
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    &__person-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-name {
+        display: block;
+        @include font(24px, #474747, $ff_m, 700);
+        margin-top: 25px;
+      }
+
+      &-nick {
+        @include font(16px, #8d81ac, $ff_m);
+        margin-top: 7px;
+      }
+    }
+
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-feedback {
+        @include font(17px, #333, $ff_l);
+        margin-top: 20px;
+        line-height: 24px;
+
+        & span {
+          @include font(17px, #8d81ac, $ff_l);
+        }
+      }
+
+      &-time-feedback {
+        @include font(16px, #848e97, $ff_m);
+        margin-top: 15px;
+      }
+    }
+  }
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .info-item {
+    .btn-link {
+      position: relative;
+      width: 280px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 50px;
+      margin-top: 30px;
+    }
+
+    .btn-git {
+      @include font(22px, #000, $ff_m);
+      background-color: #f3f3f3;
+
+      &:hover {
+        color: #fff;
+        background-color: #273f4c;
+      }
+    }
+
+    .btn-tw {
+      @include font(22px, #fff, $ff_m);
+      background-color: #26a6d1;
+      box-sizing: border-box;
+
+      &:hover {
+        color: #21a7d2;
+        background-color: #fff;
+        border: 1px solid #21a7d2;
+      }
+    }
+
+    .btn-fb {
+      @include font(22px, #fff, $ff_m);
+      background-color: #3b5998;
+      box-sizing: border-box;
+
+      &:hover {
+        color: #385899;
+        background-color: #fff;
+        border: 1px solid #385899;
+      }
+    }
+
+    .fa-github_pos, .fa-twitter_pos, .fa-facebook-f_pos {
+      position: absolute;
+      left: 25px;
+      top: 12px;
+    }
+
+    .item-foll {
+      @include font(14px, #848e97, $ff_m);
+      display: block;
+      text-align: center;
+      margin-top: 18px;
+    }
+  }
+}
+
+@include media(480px) {
+  .social {
+    .container {
+      width: 460px;
+    }
+
+    .slick {
+      &-content {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      &__person-item {
+        margin-right: 25px;
+      }
+
+      &__person-info {
+        align-items: flex-start;
+      }
+      &__info-feedback{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  .social {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      width: 768px;
+    }
+    .slick-left {
+      margin-left: 10px;
+    }
+    .slick-right {
+      margin-right: 10px;
+    }
+  ;
+    &__info {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      &-git__link, &-tw__link, &-fb__link {
+        width: 260px;
+      }
+    }
+  }
+}
+
+@include media(1200px) {
+  .social {
+    .container {
+      width: 1200px;
+    }
+    .slick {
+      justify-content: space-around;
+    }
+    .slick__info {
+      width: 730px;
+    }
+    &__info {
+      width: 925px;
+      margin: 0 auto;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+}

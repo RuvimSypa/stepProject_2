@@ -1,0 +1,192 @@
+.footer {
+
+  &__logo {
+    margin-top: 40px;
+
+    &-img {
+      display: none;
+      background: url("../../img/logoSprite.png") no-repeat;
+      width: 43px;
+      height: 42px;
+      background-position: -10px -9px;
+    }
+
+    &-title {
+      @include font(24px, #333333, $ff_m);
+      text-transform: uppercase;
+
+      span {
+        color: #8d81ac;
+      }
+    }
+
+    &-info {
+      @include font(14px, #848e97, $ff_m);
+      margin-top: 36px;
+      line-height: 21px;
+      width: 260px;
+    }
+  }
+
+  &__menu-nav {
+    margin-top: 36px;
+
+    &__title {
+      @include font(16px, #323232, $ff_m);
+      margin-bottom: 23px;
+    }
+
+    &__link {
+      margin-top: 10px;
+    }
+
+    &__link a {
+      @include font(15px, #8d81ac, $ff_m);
+      text-decoration: none;
+
+    }
+  }
+
+  &__requisites {
+    &-phone {
+      margin-top: 36px;
+
+      &-link {
+        @include font(30px, #31384d, $ff_m, 700);
+        text-decoration: none;
+      }
+
+      &-info {
+        @include font(12px, #848e97, $ff_m);
+        display: block;
+        margin-top: 15px;
+      }
+    }
+
+    &-location {
+      margin-top: 36px;
+
+      &-city {
+        @include font(16px, #323232, $ff_m);
+        margin-bottom: 20px;
+      }
+
+      &-address {
+        @include font(14px, #848e97, $ff_m);
+        margin-top: 10px;
+        display: block;
+      }
+    }
+
+  }
+
+  &__info {
+    margin-top: 36px;
+
+    &-title {
+      @include font(16px, #323232, $ff_m);
+      margin-bottom: 25px;
+    }
+
+    &-text {
+      @include font(14px, #848e97, $ff_m);
+      line-height: 23px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include media(480px) {
+  .footer {
+    .container {
+      width: 460px;
+      margin-left: 35px;
+    }
+
+    &__logo {
+      &-block {
+        display: flex;
+        align-items: center;
+      }
+
+      &-img {
+        display: block;
+        margin-right: 18px;
+      }
+    }
+  }
+}
+
+@include media(768px) {
+  .footer {
+    .container {
+      width: 768px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      &__block {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+
+    &__logo-info {
+      width: 310px;
+      margin-right: 90px;
+
+    }
+
+    &__requisites {
+      width: 310px;
+      margin-right: 90px;
+    }
+
+    &__info {
+      width: 300px;
+    }
+  }
+}
+
+@include media(1200px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      width: 1200px;
+      margin-right: 0;
+      margin-left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__block {
+        justify-content: space-between;
+      }
+    }
+
+    &__logo-block:hover h2 {
+      color: #8d81ac;
+    }
+
+    &__menu-nav {
+      margin-top: 40px;
+
+      &__link a:hover {
+        border-bottom: 1px solid #8d81ac;
+      }
+    }
+
+    &__logo-info {
+      margin-right: 50px;
+    }
+
+    &__requisites {
+      width: 225px;
+    }
+
+    &__info {
+      margin-top: 40px;
+    }
+  }
+}

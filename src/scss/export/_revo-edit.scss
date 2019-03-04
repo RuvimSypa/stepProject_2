@@ -1,0 +1,68 @@
+.revo-edit {
+  text-align: center;
+  &__content {
+    margin: 120px auto 88px auto;
+    &-title {
+      @include font(26px, #635c73, $ff_m, 700);
+      line-height: 42px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    &-description {
+      @include font(14px, #323232, $ff_l);
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
+    &__git {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      &-btn {
+        margin: 10px 5px;
+      }
+    }
+  }
+}
+@include media(480px) {
+  .revo-edit {
+    &__content {
+      &-title {
+        font-size: 42px;
+        line-height: 48px;
+      }
+      &-description {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+@include media(768px) {
+  .revo-edit {
+    &__content {
+      &-title {
+        font-size: 42px;
+        line-height: 20px;
+      }
+      &-description {
+        font-size: 21px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+@include media(1200px) {
+  .revo-edit {
+    &__content {
+      width: 900px;
+      &-title {
+        font-size: 54px;
+        line-height: 20px;
+      }
+      &-description {
+        font-size: 21px;
+        line-height: 32px;
+      }
+    }
+  }
+}
